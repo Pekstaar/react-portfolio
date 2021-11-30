@@ -64,7 +64,9 @@ const CreateProject = () => {
   return (
     <section className="">
       <div className=" page-section bg-dark flex items-center ">
-        <i className="bi bi-arrow-left text-5xl btn btn-primary font-bold mx-3 h-10"></i>
+        <a href="/">
+          <i className="bi bi-arrow-left text-5xl btn btn-primary font-bold mx-3 h-10"></i>
+        </a>
 
         {/* <!-- projects --> */}
         <div className=" px-4 py-5 relative">
@@ -163,7 +165,10 @@ const CreateProject = () => {
               />
               <button
                 className="bg-indigo-700 rounded p-2 text-white"
-                onClick={upload}
+                onClick={(e) => {
+                  e.preventDefault();
+                  upload();
+                }}
               >
                 upload
               </button>

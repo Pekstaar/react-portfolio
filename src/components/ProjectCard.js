@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const ProjectCard = ({ image, description, title, languages }) => {
+const ProjectCard = ({ image, description, title, languages, id }) => {
   return (
     <>
       {/* card */}
@@ -29,7 +29,7 @@ const ProjectCard = ({ image, description, title, languages }) => {
 
         {/* buttons */}
         <div className="view text-center">
-          <Link to="/project/:id">
+          <Link to={`/project/${id}`}>
             <i className="bi bi-eye-fill text-2xl"></i>
           </Link>
         </div>
